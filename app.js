@@ -9,7 +9,7 @@ const app = express()
 const portv = process.env.port
 
 app.use(express.json())
-app.use(cors())
+app.use(cors('*'))
 app.use('/api',Router)
 app.use(express.json({limit:'50mb'}));
 
